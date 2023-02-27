@@ -68,7 +68,7 @@ public class EarthquakeActivity extends AppCompatActivity {
         /**
          * This method runs on a background thread and performs the network request.
          * We should not update the UI from a background thread, so we return a list of
-         * {@link Earthquake}s as the result.
+
          */
         @Override
         protected ArrayList<Data> doInBackground(String... urls) {
