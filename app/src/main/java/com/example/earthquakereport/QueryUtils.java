@@ -43,12 +43,6 @@ public final class QueryUtils {
      */
     public static ArrayList<Data> extractEarthquakes(String requestUrl) {
 
-        // Create an empty ArrayList that we can start adding earthquakes to
-//        ArrayList<Data> earthquakes = new ArrayList<>();
-//        String place, url;
-//        double magnitude;
-//        long time;
-
         // Try to parse the SAMPLE_JSON_RESPONSE. If there's a problem with the way the JSON
         // is formatted, a JSONException exception object will be thrown.
         // Catch the exception so the app doesn't crash, and print the error message to the logs.
@@ -189,11 +183,14 @@ public final class QueryUtils {
                 // Extract the value for the key called "url"
                 String url = properties.getString("url");
 
-                // Create a new {@link Earthquake} object with the magnitude, location, time,
+                // Create a new earthquake object with the magnitude, location, time,
                 // and url from the JSON response.
                 Data earthquake = new Data(magnitude, location, time, url);
 
-                // Add the new {@link Earthquake} to the list of earthquakes.
+                /**
+                 * Add the new {@link Data} to the list of earthquakes.
+                 */
+
                 earthquakes.add(earthquake);
             }
 

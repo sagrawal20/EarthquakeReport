@@ -47,9 +47,6 @@ public class DataAdapter extends ArrayAdapter<Data> {
         magnitudeCircle.setColor(magnitudeColor);
         textViewFirst.setText(magnitude);
 
-//        TextView textViewSecond = listItemView.findViewById(R.id.secondTV);
-//        textViewSecond.setText(currentData.getLocation());
-
         String fullLocation = currentData.getLocation();
         String[] formattedLocation = formatLocation(fullLocation);
         TextView locationFirst = listItemView.findViewById(R.id.location_offset);
